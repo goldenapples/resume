@@ -1,0 +1,27 @@
+{
+  "name": "resume-template",
+  "version": "0.0.0",
+  "description": "My basic resume template, as a single page HTML document built using grunt.js",
+  "main": "resume.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "goldenapples",
+  "license": "WTFPL",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "assemble": "~0.4.11",
+    "mime": "~1.2.11",
+    "grunt-data-uri": "~0.1.1",
+    "grunt-css-img-2-data-uri": "~0.1.2",
+    "grunt-contrib-clean": "~0.5.0",
+    "glob": "~3.2.6",
+    "yaml-front-matter": "~2.1.0"
+  },
+  "keywords": [
+    "html5",
+    "WordPress",
+    "front end developer",
+    "resume"
+  ]
+}

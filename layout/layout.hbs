@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{name}}} | {{title}}}</title>
+    <style type="text/css">
+        {{> style-inline}}
+    </style>
+</head>
+<body>
+	<div id="contact">
+
+        <h2>{{name}}}</h2>
+        <h3>{{title}}</h3>
+		<br />
+
+		<ul>
+            {{#each social}}
+            <li class="social icon {{@key}}"><a href="{{this}}">{{.}}</a></li>
+            {{/each}}
+		</ul>
+
+		<ul>
+			<li><a href="mailto:than@goldenapplesdesign.com">than@goldenapplesdesign.com</a></li>
+			<li>503-877-2880</li>
+		</ul>
+
+        <p class="summary">
+            {{summary}}
+        </p>
+	</div>
+	<div id="resume">
+
+        {{#inline 'content/*.hbs'}}
+        <h1>{{title}}</h1>
+        {{#markdown}}{{page}}{{/markdown}}
+        {{/inline}}
+
+        {{>workExperience}}
+
+	</div>
+</body>
+</html>

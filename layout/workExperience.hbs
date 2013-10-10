@@ -1,0 +1,12 @@
+          <section id="employment">
+            <h1>Employment</h1>
+            {{#each pages}}
+              <h2>{{data.company}} <span class="location">{{data.location}}</span></h2>
+              <h3>
+                  {{data.position}} <span class="time">{{data.dates}}</span>
+              </h3>
+              <p>
+                  {{page}}
+              </p>
+            {{/each}}
+          </section>

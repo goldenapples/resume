@@ -1,0 +1,119 @@
+
+@import url(http://fonts.googleapis.com/css?family=News+Cycle:400,700);
+
+body {
+    background: lightgray;
+    font-family: News Cycle,Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    line-height: 1.25;
+    margin: 0;
+    padding: 0;
+}
+#contact {
+    position: fixed;
+    top: 1em;
+    left: 1em;
+    max-width: 18em;
+}
+@media (max-width: 80em) {
+    #contact {
+        position: relative;
+        max-width: 50em;
+        padding: 1em 2em;
+        margin: 0 auto;
+        top: 0;
+        left: 0;
+    }
+}
+#resume {
+    max-width: 50em;
+    padding: 2em;
+    background: white;
+    margin: 0 auto 0 20em;
+    color: #222;
+    box-shadow: 0 0 30px rgba(0,0,0,.2);
+}
+p,ul {
+    margin: 0 0 1.25em;
+}
+ul {
+    margin-left: 0;
+    padding-left: 0;
+    list-style: none;
+}
+ul ul {
+    margin-left: 1em;
+    margin-bottom: .725em;
+}
+ul ul li:before {
+    content: "\2014";
+    margin: 0 .125em 0 -1em;
+    display: inline;
+}
+h1,h2,h3,h4 {
+    margin: 0;
+}
+h1 {
+    color: #666;
+    font-size: 1.5em;
+    padding-bottom: .125em;
+    border-bottom: 1px dotted darkgray;
+    margin-bottom: .875em;
+}
+h2 {
+    font-size: 1.45em;
+    line-height: 1;
+}
+h3 {
+    color: #666;
+    font-family: Georgia, Times New Roman, Times, serif;
+    font-weight: normal;
+    font-style: italic;
+    line-height: 1.6;
+}
+.location {
+    font-weight: normal;
+    font-size: .9em;
+}
+.location:before {
+    content: "| ";
+}
+.time {
+    font-style: normal;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px dotted gray;
+}
+a:hover {
+    color: #000;
+    border-bottom-style: solid;
+}
+.social {
+    text-indent: -0.5em;
+    width: 18.5em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.social:before {
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    background-position: 50% 50%;
+}
+.github:before {
+	background-image: url(../simple-icons/icons/github/github-48-black.png);
+}
+.wordpress:before {
+	background-image: url(../simple-icons/icons/wordpress/wordpress-48-black.png);
+}
+.twitter:before {
+	background-image: url(../simple-icons/icons/twitter/twitter-48-black.png);
+}
+.html5:before {
+	background-image: url(../simple-icons/icons/html5/html5-48-black.png);
+}

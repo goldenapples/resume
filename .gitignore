@@ -1,0 +1,7 @@
+# Ignored build files
+node_modules
+build/*
+dest/*
+
+# Vim swap files
+*.sw[op]
