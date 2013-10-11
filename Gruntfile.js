@@ -19,14 +19,12 @@ module.exports = function(grunt) {
         assemble: {
             options: {
                 data: 'content/data.yml',
-                layout: 'layout/layout.hbs',
                 helpers: ['helper-aggregate','helpers/helpers-*.*'],
                 partials: ['build/*', 'layout/workExperience.hbs'],
-                collections: [ 'jobs' ]
             },
             resume: {
+                options: { layout: 'layout/layout.hbs' },
                 src: 'colophon.hbs',
-                files: { 'dest/jobs/': 'content/work-experience/*.hbs' },
                 dest: 'dest/resume.html'
             }
         }
