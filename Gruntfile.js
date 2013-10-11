@@ -10,10 +10,9 @@ module.exports = function(grunt) {
         css_img_2_data_uri: {
             options: {
                 files: [
-                    {
-                    src: 'layout/style.css',
-                    dest: 'build/style-inline.hbs'
-                    }
+                    { src: 'layout/style-all.css',    dest: 'build/style-all.hbs' },
+                    { src: 'layout/style-screen.css', dest: 'build/style-screen.hbs' },
+                    { src: 'layout/style-print.css',  dest: 'build/style-print.hbs' },
                 ]
             }
         },

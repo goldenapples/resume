@@ -105,15 +105,3 @@ a:hover {
     content: " ";
     background-position: 50% 50%;
 }
-.github:before {
-	background-image: url(../simple-icons/icons/github/github-48-black.png);
-}
-.wordpress:before {
-	background-image: url(../simple-icons/icons/wordpress/wordpress-48-black.png);
-}
-.twitter:before {
-	background-image: url(../simple-icons/icons/twitter/twitter-48-black.png);
-}
-.html5:before {
-	background-image: url(../simple-icons/icons/html5/html5-48-black.png);
-}
