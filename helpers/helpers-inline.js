@@ -55,6 +55,7 @@ module.exports.register = function(Handlebars, options) {
       context.pages.push(data); // Add page to pages array in context
     }
 
+    console.log( data );
     return options.fn(context);
   });
 

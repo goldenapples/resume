@@ -7,36 +7,56 @@
     </style>
 </head>
 <body>
-	<div id="contact">
+<div id="contact">
 
-        <h2>{{name}}}</h2>
-        <h3>{{title}}</h3>
-		<br />
+  <h2>{{name}}}</h2>
+  <h3>{{title}}</h3>
 
-		<ul>
-            {{#each social}}
-            <li class="social icon {{@key}}"><a href="{{this}}">{{.}}</a></li>
-            {{/each}}
-		</ul>
+  <ul>
+    {{#each social}}
+    <li class="social icon {{@key}}"><a href="{{this}}">{{.}}</a></li>
+    {{/each}}
+  </ul>
 
-		<ul>
-			<li><a href="mailto:than@goldenapplesdesign.com">than@goldenapplesdesign.com</a></li>
-			<li>503-877-2880</li>
-		</ul>
+  <ul>
+    <li><a href="mailto:{{email}}">{{email}}</a></li>
+    <li>{{phone}}</li>
+  </ul>
 
-        <p class="summary">
-            {{summary}}
-        </p>
-	</div>
-	<div id="resume">
+  <p class="summary">
+    {{summary}}
+  </p>
 
-        {{#inline 'content/*.hbs'}}
-        <h1>{{title}}</h1>
-        {{#markdown}}{{page}}{{/markdown}}
-        {{/inline}}
+</div>
+<div id="resume">
 
-        {{>workExperience}}
+  {{#inline 'content/*.hbs'}}
+  {{#each pages}}
+  <section id="{{basename src}}">
+    <h1>{{title}}</h1>
+    {{#markdown}}{{page}}{{/markdown}}
+  </section>
+  {{/each}}
+  {{/inline}}
 
-	</div>
+  <section id="employment">
+    <h1>Employment</h1>
+    {{#inline 'content/work-experience/*.*'}}
+    {{#each pages}}
+      <article id="{{basename src}}">
+        <h2>{{this.company}} <span class="location">{{this.location}}</span></h2>
+        <h3>{{this.position}} <span class="time">{{this.dates}}</span></h3>
+        {{#markdown}}{{this.page}}{{/markdown}}
+      </article>
+    {{/each}}
+    {{/inline}}
+  </section>
+
+</div>
+<!--
+
+{{> body}}
+
+-->
 </body>
 </html>

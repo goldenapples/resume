@@ -26,7 +26,7 @@ module.exports = function(grunt) {
                 collections: [ 'jobs' ]
             },
             resume: {
-                src: 'content/work-experience/*.hbs',
+                src: 'colophon.hbs',
                 files: { 'dest/jobs/': 'content/work-experience/*.hbs' },
                 dest: 'dest/resume.html'
             }
@@ -42,4 +42,3 @@ module.exports = function(grunt) {
     grunt.registerTask('default', ['css_img_2_data_uri', 'assemble']);
 
 };
-
