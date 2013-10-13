@@ -8,3 +8,13 @@ social:
     wordpress: 'http://profiles.wordpress.org/goldenapples'
     html5: 'http://goldenapplesdesign.com'
 statement: 'I am passionate about free and open source software and about creatively pushing to advance and democratize the field of digital publishing.'
+skills:
+    WordPress:
+        - developing and maintaining highly custom WordPress sites
+        - plugin development and maintainance
+        - answering questions on support forums and mailing lists
+    Javascript:
+        - jQuery, jQuery UI and jQuery Mobile
+        - 'MVC frameworks: AngularJS, Knockout'
+        - NodeJS scripts and Grunt
+

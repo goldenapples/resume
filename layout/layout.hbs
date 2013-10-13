@@ -2,20 +2,26 @@
 <html>
 <head>
 <title>{{name}}} | {{title}}}</title>
-<style type="text/css" media="all">
-{{> style-all}}
-</style>
 <!--
 
 {{> body}}
 
 -->
+<link rel="stylesheet"
+      href="http://fonts.googleapis.com/css?family=Roboto:300,100,300italic&subset=latin,latin-ext"
+      type ="text/css" />
+<style type="text/css" media="all">
+{{> style-all}}
+</style>
 </head>
 <body>
-<div id="contact">
 
-  <h2>{{name}}}</h2>
-  <h3>{{title}}</h3>
+<div id="contact" class="corner-box">
+
+  <header class="hgroup">
+      <h1>{{name}}}</h1>
+      <h3>{{title}}</h3>
+  </header>
 
   <ul>
     {{#each social}}
@@ -33,6 +39,21 @@
   </p>
 
 </div>
+
+{{#if skills}}
+<div id="skills" class="corner-box">
+  <header class="hgroup">
+      <h3>Skills and Interests</h3>
+  </header>
+  <ul class="skills-cloud">
+      {{#each skills}}
+      <h2>{{@key}}</h2>
+          {{#each this}}<li>{{this}}</li>{{/each}}
+      {{/each}}
+  </ul>
+</div>
+{{/if}}
+
 <div id="resume">
 
   {{#inline 'content/*.hbs'}}
@@ -58,9 +79,11 @@
   </section>
 
 </div>
+
 <style type="text/css" media="screen">
     {{> style-screen}}
 </style>
+
 <style type="text/css" media="print">
     {{> style-print}}
 </style>

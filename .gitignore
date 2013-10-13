@@ -3,5 +3,8 @@ node_modules
 build/*
 dest/*
 
+# Cache files
+.sass-cache
+
 # Vim swap files
 *.sw[op]

@@ -7,12 +7,24 @@ module.exports = function(grunt) {
             build: [ "build" ],
             dist: [ "dist" ]
         },
+        sass: {
+            options: {
+                style: "expanded"
+            },
+            build: {
+                files: {
+                    'build/style-all.css': 'layout/style-all.scss',
+                    'build/style-screen.css': 'layout/style-screen.scss',
+                    'build/style-print.css': 'layout/style-print.scss',
+                }
+            }
+        },
         css_img_2_data_uri: {
             options: {
                 files: [
-                    { src: 'layout/style-all.css',    dest: 'build/style-all.hbs' },
-                    { src: 'layout/style-screen.css', dest: 'build/style-screen.hbs' },
-                    { src: 'layout/style-print.css',  dest: 'build/style-print.hbs' },
+                    { src: 'build/style-all.css',    dest: 'build/style-all.hbs' },
+                    { src: 'build/style-screen.css', dest: 'build/style-screen.hbs' },
+                    { src: 'build/style-print.css',  dest: 'build/style-print.hbs' },
                 ]
             }
         },
@@ -27,15 +39,24 @@ module.exports = function(grunt) {
                 src: 'colophon.hbs',
                 dest: 'dest/resume.html'
             }
+        },
+        watch: {
+            anything: {
+                files: [ 'colophon.hbs', 'Gruntfile.js', 'layout/**/*', 'content/**/*' ],
+                tasks: [ 'default' ]
+            }
         }
     });
 
     // Load Grunt plugins required to rebuild file.
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-css-img-2-data-uri');
     grunt.loadNpmTasks('assemble');
 
+    grunt.loadNpmTasks('grunt-contrib-watch');
+
     // Define default task.
-    grunt.registerTask('default', ['css_img_2_data_uri', 'assemble']);
+    grunt.registerTask('default', ['clean', 'sass', 'css_img_2_data_uri', 'assemble']);
 
 };
