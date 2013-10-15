@@ -45,12 +45,14 @@
   <header class="hgroup">
       <h3>Skills and Interests</h3>
   </header>
-  <ul class="skills-cloud">
-      {{#each skills}}
+  {{#each skills}}
+  <aside class="skill-description">
       <h2>{{@key}}</h2>
-          {{#each this}}<li>{{this}}</li>{{/each}}
-      {{/each}}
-  </ul>
+          <ul class="skills-cloud">
+              {{#each this}}<li alt="{{@key}}">{{this}}</li>{{/each}}
+          </ul>
+  </aside>
+  {{/each}}
 </div>
 {{/if}}
 

@@ -1,12 +1,104 @@
-.github:before {
-	background-image: url(../simple-icons/icons/github/github-48-black.png);
+
+@media screen and (min-width: 80em) {
+    .corner-box  {
+        max-width: unquote( "calc( 50% - 28em )" );
+    }
 }
-.wordpress:before {
-	background-image: url(../simple-icons/icons/wordpress/wordpress-48-black.png);
+@media (max-width: 80em) {
+    .corner-box  {
+        position: relative;
+        max-width: 50em;
+        padding: 1em 2em;
+        margin: 0 auto;
+        top: 0;
+        left: 0;
+    }
 }
-.twitter:before {
-	background-image: url(../simple-icons/icons/twitter/twitter-48-black.png);
+
+#skills .hgroup {
+    margin: 1em 0;
 }
-.html5:before {
-	background-image: url(../simple-icons/icons/html5/html5-48-black.png);
+
+.skills-cloud {
+    list-style-type: inline;
+    li {
+        display: inline;
+        padding: 3px;
+        &:before { content: "<"; }
+        &:after { content: ">"; }
+        &:hover {
+            background: rgba( white, .40 );
+            box-shadow: 0 0 16px rgba( white, .40 );
+        }
+    }
+}
+
+.social {
+    margin: 0 -20em 0 -1em;
+    padding: 0 20em 0 1em;
+    width: 100%;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    text-indent: -0.5em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    &:before {
+        width: 48px;
+        height: 48px;
+        display: inline-block;
+        vertical-align: middle;
+        content: " ";
+    }
+    &:hover {
+        line-height: 54px;
+        margin-top: -3px;
+    }
+    a {
+        color: white;
+        border-bottom: none;
+    }
+}
+
+.github {
+    background-color: lighten( desaturate( #4183C4, 50 ), 20 );
+    &:hover {
+        background-color: #4183C4;
+    }
+    &:before {
+        background-image: url(../simple-icons/icons/github/github-48.png);
+    }
+}
+.wordpress {
+    background-color: lighten( desaturate( #21759B, 50 ), 20 );
+    &:hover {
+        background-color: #21759B;
+    }
+    &:before {
+        background-image: url(../simple-icons/icons/wordpress/wordpress-48.png);
+    }
+}
+.twitter {
+    background-color: lighten( desaturate( #00ACED, 50 ), 20 );
+    &:hover {
+        background-color: #00ACED;
+    }
+    &:before {
+        background-image: url(../simple-icons/icons/twitter/twitter-48.png);
+    }
+}
+.html5 {
+    background-color: lighten( desaturate( #F06529, 50 ), 20 );
+    &:hover {
+        background-color: #F06529;
+    }
+    &:before {
+        background-image: url(../simple-icons/icons/html5/html5-48.png);
+    }
+}
+
+#resume {
+    z-index: 100;
+    position: relative;
 }

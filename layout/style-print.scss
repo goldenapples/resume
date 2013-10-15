@@ -1,1 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: white;
+    font-size: 10pt;
+    p {
+        widows: 3;
+        orphans: 3;
+    }
+}
+#contact, #skills {
+    position: relative;
+    width: 48%;
+    max-width: 48%;
+    top: 0;
+}
+#contact {
+    float: left;
+    left: 0;
+}
+#skills {
+    float: right;
+    right: 0;
+    padding-top: 1.5em;
+
+    .skills-cloud {
+        font-size: .9em;
+        list-style-type: inline;
+        li {
+            display: inline;
+            &:after {
+                content: ", ";
+            }
+            &:last-child:after {
+                content: "";
+            }
+        }
+
+    }
+}
+#resume {
+    clear: both;
+    padding: 1em 0 0;
+    box-shadow: none;
+    border-top: 3px double #666;
+}
 

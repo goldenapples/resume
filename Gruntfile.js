@@ -31,7 +31,7 @@ module.exports = function(grunt) {
         assemble: {
             options: {
                 data: 'content/data.yml',
-                helpers: ['helper-aggregate','helpers/helpers-*.*'],
+                helpers: ['handlebars-helpers', 'helper-aggregate', 'helpers/helpers-*.*'],
                 partials: ['build/*', 'layout/workExperience.hbs'],
             },
             resume: {
