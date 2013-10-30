@@ -9,12 +9,13 @@ social:
     html5: 'http://goldenapplesdesign.com'
 statement: 'I am passionate about free and open source software and about creatively pushing to advance and democratize the field of digital publishing.'
 skills:
-    WordPress:
-        - developing and maintaining highly custom WordPress sites
-        - plugin development and maintainance
-        - answering questions on support forums and mailing lists
-    Javascript:
-        - jQuery, jQuery UI and jQuery Mobile
+    HTML:
+        - HTML5, CSS, Javascript
+        - data visualization
         - 'MVC frameworks: AngularJS, Knockout'
-        - NodeJS scripts and Grunt
+    Scripting languages:
+        - PHP; developing WordPress sites, and plugins
+        - Ruby, both for Rails and command-line tools
+        - Javascript, NodeJS scripts and Grunt
+        - BASH
 
