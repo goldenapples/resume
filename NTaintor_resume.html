@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Nathaniel Taintor | Front-end Web Developer</title>
+<!--
+
+COLOPHON
+============================================================
+
+Built by Nathaniel Taintor, (c) 2013
+
+All details of how to build this file can be found in the repository at
+https://github.com/goldenapples/resume . This uses text files and YAML config
+files to build a single page HTML resume, using a grunt build task.
+
+If you use this, I'd love to see how. Feel free to fork the original repo and
+share improvements back.
+
+
+Credits:
+------------------------------------------------------------
+
+Typeface:
+---------
+"Roboto" by [Christian Robertson](https://plus.google.com/110879635926653430880/about)
+Source: http://www.google.com/fonts/specimen/Roboto
+License: Apache License, 2.0 - http://www.apache.org/licenses/LICENSE-2.0.html
+
+Icons:
+------
+"Simple Icons" by Dan Leech
+Source: https://github.com/danleech/simple-icons
+License: Free Art License - http://artlibre.org/licence/lal/en
+
+Build:
+------
+Built with [grunt](http://gruntjs.com) and [assemble](htpp://assemble.io)
+Source: https://github.com/goldenapples/resume
+License: WTFPL - http://www.wtfpl.net/about/
+
+
+-->
+<link rel="stylesheet"
+      href="http://fonts.googleapis.com/css?family=Roboto:300,100,300italic&subset=latin,latin-ext"
+      type ="text/css" />
+<style type="text/css" media="all">
+body {
+  background: lightgray;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.45;
+  margin: 0;
+  padding: 0;
+}
+
+#contact {
+  left: 1em;
+}
+
+#skills {
+  right: 1em;
+  text-align: right;
+}
+
+#resume {
+  max-width: 50em;
+  padding: 2em;
+  background: white;
+  margin: 0 auto;
+  color: #222;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.corner-box {
+  position: fixed;
+  top: 1em;
+  max-width: 18em;
+}
+.corner-box h1 {
+  font-size: 2em;
+  margin-bottom: 0;
+}
+.corner-box h2 {
+  margin: .5em 0 .25em;
+}
+@media screen and (min-width: 100em) {
+  .corner-box {
+    max-width: 20 em;
+  }
+}
+@media screen and (min-width: 110em) {
+  .corner-box {
+    max-width: 25 em;
+  }
+}
+@media screen and (min-width: 120em) {
+  .corner-box {
+    max-width: 30 em;
+  }
+}
+@media screen and (min-width: 130em) {
+  .corner-box {
+    max-width: 35 em;
+  }
+}
+@media screen and (min-width: 140em) {
+  .corner-box {
+    max-width: 40 em;
+  }
+}
+@media screen and (min-width: 150em) {
+  .corner-box {
+    max-width: 45 em;
+  }
+}
+@media screen and (min-width: 160em) {
+  .corner-box {
+    max-width: 50 em;
+  }
+}
+@media screen and (min-width: 170em) {
+  .corner-box {
+    max-width: 55 em;
+  }
+}
+@media screen and (min-width: 180em) {
+  .corner-box {
+    max-width: 60 em;
+  }
+}
+@media screen and (min-width: 190em) {
+  .corner-box {
+    max-width: 65 em;
+  }
+}
+@media screen and (min-width: 200em) {
+  .corner-box {
+    max-width: 70 em;
+  }
+}
+.corner-box .hgroup {
+  margin-bottom: 1em;
+}
+
+/*
+$TYPE: Type elements
+------------------------------ */
+p, ul {
+  margin: 0 0 1.25em;
+}
+
+em, .em {
+  font-style: italic;
+  font-weight: 300;
+}
+
+ul {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+}
+ul ul {
+  margin-left: 1em;
+  margin-bottom: .725em;
+  li: before;
+  li-content: "\2014";
+  li-margin: 0 .125em 0 -1em;
+  li-display: inline;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  font-weight: 100;
+  color: black;
+}
+
+h1 {
+  font-size: 1.5em;
+  padding-bottom: .125em;
+  border-bottom: 1px dotted darkgray;
+  margin-bottom: .875em;
+}
+
+h2 {
+  font-size: 1.45em;
+  line-height: 1;
+}
+
+h3 {
+  color: #666;
+  font-family: Georgia, Times New Roman, Times, serif;
+  font-weight: normal;
+  font-style: italic;
+  line-height: 1.6;
+  margin-bottom: 3px;
+}
+
+#employment h2 {
+  font-weight: 300;
+  line-height: 1.5;
+}
+#employment h2 .location {
+  font-weight: 100;
+  font-size: .8em;
+  margin-left: .5em;
+}
+#employment h2 .location:before {
+  content: "|";
+  padding-right: .5em;
+}
+
+.time {
+  font-style: normal;
+}
+.time:before {
+  content: "(";
+}
+.time:after {
+  content: ")";
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  color: #000;
+}
+
+</style>
+</head>
+<body>
+
+<div id="contact" class="corner-box">
+
+  <header class="hgroup">
+      <h1>Nathaniel Taintor</h1>
+      <h3>Front-end Web Developer</h3>
+  </header>
+
+  <ul>
+    
+    <li class="social icon github"><a href="http://github.com/goldenapples">http://github.com/goldenapples</a></li>
+    
+    <li class="social icon twitter"><a href="http://twitter.com/goldenapples">http://twitter.com/goldenapples</a></li>
+    
+    <li class="social icon wordpress"><a href="http://profiles.wordpress.org/goldenapples">http://profiles.wordpress.org/goldenapples</a></li>
+    
+    <li class="social icon html5"><a href="http://goldenapplesdesign.com">http://goldenapplesdesign.com</a></li>
+    
+  </ul>
+
+  <ul>
+    <li><a href="mailto:than@goldenapplesdesign.com">than@goldenapplesdesign.com</a></li>
+    <li>717.434.3226</li>
+  </ul>
+
+  <p class="summary">
+    
+  </p>
+
+</div>
+
+
+<div id="skills" class="corner-box">
+  <header class="hgroup">
+      <h3>Skills and Interests</h3>
+  </header>
+  
+  <aside class="skill-description">
+      <h2>WordPress</h2>
+          <ul class="skills-cloud">
+              <li alt="WordPress">developing and maintaining highly custom WordPress sites</li><li alt="WordPress">plugin development and maintainance</li><li alt="WordPress">answering questions on support forums and mailing lists</li>
+          </ul>
+  </aside>
+  
+  <aside class="skill-description">
+      <h2>Javascript</h2>
+          <ul class="skills-cloud">
+              <li alt="Javascript">jQuery, jQuery UI and jQuery Mobile</li><li alt="Javascript">MVC frameworks: AngularJS, Knockout</li><li alt="Javascript">NodeJS scripts and Grunt</li>
+          </ul>
+  </aside>
+  
+</div>
+
+
+<div id="resume">
+
+  
+  
+  <section id="summary">
+    <h1>Summary Of Experience</h1>
+    <p>I&#x27;ve been involved with publishing for most of my life.
+As a teenager I ran a BBS overnight on my 300 baud modem and put out xeroxed
+fanzines, and I&#x27;ve always been passionate about learning the technology
+surrounding and enabling communication. I&#x27;ve published books, newspapers, and
+websites of my own for fifteen years, and worked in printing, publishing and
+the web for most of my life.</p>
+<p>I am an all-around developer with experience in everything from front-end
+design and development to database optimization to shell scripting. I am always
+working to hone my skills and understand new technology, and I have never shied
+away from a challenge that involved learning new skills. I have built and
+maintained WordPress sites and plugins for over eight years, and know the
+internals of WordPress thoroughly.</p>
+
+  </section>
+  
+  
+
+  <section id="employment">
+    <h1>Employment</h1>
+    
+    
+      <article id="1_janrain">
+        <h2>Janrain, Inc. <span class="location">Portland, OR</span></h2>
+        <h3>UX Developer <span class="time">June 2012 - present</span></h3>
+        <p>I was hired as a WordPress expert to design, build out, and maintain the
+company&#x27;s existing marketing and documentation sites. I also filled the role of
+a general front-end developer, built product demos and did a ground-up redesign
+of the company&#x27;s UI framework.</p>
+<p>I joined the company during a time of rapid expansion, expecting to be able
+to devote some time to improving the various open-source platform extensions the
+company offers (WordPress, Drupal, and Magento plugins, and standalone
+Javascript widgets). Since that point, however, the company has downsized
+substantially, and I&#x27;ve been too busy as one of the few front-end developers
+there to really achieve these goals.</p>
+
+      </article>
+    
+      <article id="2_goldenapples">
+        <h2>Golden Apples Design <span class="location">remote</span></h2>
+        <h3>freelancer <span class="time">September 2006 - 2012</span></h3>
+        <p>I have been doing small freelance design/development projects since around
+2003. I jumped into full-time freelance work in September 2007, when the
+company I was working for at the time shut down. I started out with a solid
+grounding in graphic and print design, and took on several book publishers as
+clients. After teaching myself enough PHP and Javascript to be comfortable
+building websites, I branched into web design and publishing. My specialty was
+mid-sized WordPress projects and sinple-page Javascript apps.  I built and
+maintained two plugins in the WordPress plugin repository and an Android app in
+the Google Play marketplace.</p>
+
+      </article>
+    
+      <article id="3_metallo">
+        <h2>Metallo Arts <span class="location">Glenville, PA</span></h2>
+        <h3>VP, Design and Marketing <span class="time">March 2005 - August 2008</span></h3>
+        <p>I initially worked on contract for this kitchen and appliance design startup,
+designing and building the web app which was used to showcase and market the
+company&#x27;s line of products.  After the company launched, I joined full-time as
+the all-around creative and digital design specialist.  I was responsible for
+overseeing project designs, from concept sketches to CAD drawings and
+pre-production plans. I also built and maintained the company&#x27;s websites,
+promotional literature, and marketing collateral.</p>
+
+      </article>
+    
+      <article id="4_bcp">
+        <h2>Black Classic Press / BCP Digital Printing <span class="location">Baltimore, MD</span></h2>
+        <h3>Production Supervisor <span class="time">1999 - 2006</span></h3>
+        <p>I worked for this innovative publishing company and helped to modernize and
+build up their print-on-demand services.  I introduced more efficient workflows
+and automated procedures for pre-print file handling, production planning, and
+material ordering.  With my help, the company was able to further its mission
+of republishing obscure and significant works, and expand the infrastructure as
+a printer which made that possible.</p>
+
+      </article>
+    
+    
+  </section>
+
+</div>
+
+<style type="text/css" media="screen">
+    @media screen and (min-width: 80em) {
+  .corner-box {
+    max-width: calc( 50% - 28em );
+  }
+}
+@media (max-width: 80em) {
+  .corner-box {
+    position: relative;
+    max-width: 50em;
+    padding: 1em 2em;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+  }
+}
+#skills .hgroup {
+  margin: 1em 0;
+}
+
+.skills-cloud {
+  list-style-type: inline;
+}
+.skills-cloud li {
+  display: inline;
+  padding: 3px;
+}
+.skills-cloud li:before {
+  content: "<";
+}
+.skills-cloud li:after {
+  content: ">";
+}
+.skills-cloud li:hover {
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 16px rgba(255, 255, 255, 0.4);
+}
+
+.social {
+  margin: 0 -20em 0 -1em;
+  padding: 0 20em 0 1em;
+  width: 100%;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  text-indent: -0.5em;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.social:before {
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  vertical-align: middle;
+  content: " ";
+}
+.social:hover {
+  line-height: 54px;
+  margin-top: -3px;
+}
+.social a {
+  color: white;
+  border-bottom: none;
+}
+
+.github {
+  background-color: #b4b6b7;
+}
+.github:hover {
+  background-color: #4183C4;
+}
+.github:before {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAACZUlEQVR42u3YT0iTcRzH8R/bQrIyhYLC7BKBJjUsopDqElRSZH8w+nMo6TyrU3gKCoIudimLYBl0KIgQYR4UoaJTjEaYZRAVWZAUkZEQ2OzpffgdHr78enTbd3PR84YXwuN+sA8+jPkYz/P+aeGAcEA4IBwQDggHaKrCViTQhR7rMhLYhqpyHLAe3RjDTI3hGjaUw4BaJJFFrmVxE7VzNWAXPqDQPqKl1AOOIwutptFeqgEHUKzaij2gAT/g2X4jiQFMYbZNYRBJTPuuT2JNsQZE8Qj+RmCsdbiDCTxHP25bKXttAncRh7GG4e8xosUYcAiyPhhhOSIwQsT+zgi9kB3RHhBFGrIhmAINQpZBVHPARrgaQQwmTzEMw9UmzQHn4Go/TIFa4eq85oAByNIwSp5ANqQ1IIbXkF1SHHARsjeYpzGgGl8gO6M44BRkX1GjMWAJvkHWqTjgLGTfsVRjwCKMQ3ZdcUA3ZJ+xWGNABC8ge6Y4IAPZKKJan0L34WqLwptvhqtezY/RBFw9xUKYPC1AGq5Oaw5YhV9w9RD1MDmqxwO4ymK12gCrD54dcgwdmIRnf/bgIBpRASNUYC3acMt31lUKRnvAZnHrLMN2yDJw3VZc49zsatYaIN1wfJXohL9EwPkOzFSymP+RVeMlPNs+37fVk9iN+QHndyKoV6jRHiA14BM8eo+mHM7uwN8aR2OpnkrE8RYe/cQ9XEAX4nn8Bd6hqdTPhVYgBdnegDMtkPWjbi4fLZ7AKDxba8Br94j7vb1cno1W4jCuYGXA6+pwFUdRGT5eDweEA8IB4YBwwH8/4A8XemfEMmfwuAAAAABJRU5ErkJggg==');
+}
+
+.wordpress {
+  background-color: #8197a1;
+}
+.wordpress:hover {
+  background-color: #21759B;
+}
+.wordpress:before {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAADjklEQVR42u2ZW0gVURSGS1NQQ8280kt0gQipBKOHLg89FBFBmtFDWGoJEvUQhVKppFGG1ulCF7VEOT1kFyOipISCIjI9knIsiaiHLiKVpmGpaXX6i/9hsZijUTMehVnw4ex1/pk9/+w1e/aMEzwez7jGNmAbsA3YBmwDY9ZAEIggQePBQDhIAmWgGXSBb2CQ2y2gHCRTO2YMxICDPMnfMQAagBM4iJO5fmo+gUMg1tcGUsWJ13IEIofRTwVrwS1hZLMvDEwCp3kSLrD0H46xBDTwGGd5TOsNsKNL7NgBAv9zFE/wWJdBwGgYOMMO95hw/2QAN/AwSq02sJEdFZpw8vHAKFKtMhAFOsFXsA1kgWxwEmynJpEjVMBcJnW7wDGQC/yo3QCM4iOItsLAAaDjB7gGdggD1eA10HET5NOAtxEY4t8isw2EgvegB8joAsEG+oVKNwimG+iuKN0LcB98BmFmGkhiB+ng1V/UrD9wK12ugW4m6BWaZyCF2ylmGjjPZUEg538ZN6jR7FW6J6J8JEeExsXR7geVZhpoBS5uLwMyer0sCWazpmXMM9DNBz/5u5O5x6DNLANBrMkLbAeA50CE1+XAHaXLN9CEgA5VjpW8MMFmGIjgbOMQuQI9wzCv2ad0LbqMWJZvOT1HMVdCfaRVBub+yTHYeZzBvveAjgUGq9nv4CrbyoB5JeRU+YdARrrBDNMFWpVuv9KtYD6JbXNLiLSCRpXLAjJq1e85oAmsVDo38Be6UxzBUJGrN+0mJhVgQL1JxYEv4sT6wDTxezPIAxPBG2UiQaxs28FFsV8Yp9EqMw0ks+M1Kl8DZGxhfhav6hy2HUpXyHwC26vEMVdb8SAL431wx+AJLeO2KJ+WYZYWT5nPAz2q1mtZ/+GmGSBF7HyRyE0GHaqMokEDyBE6PxqSEc8HVpWB0WKrltPdoEm9/umlxXHwDsxQ+2crXTWv/nKxfmrkSMeYboCksvOjIrcY6KjT+9LQoNK9BIFq7k+z+pWyjB1li/JoAzK2etm3TukOM7+b7XOj8lIv1vElzO0c6alMNql3hERQyHaN1S/12kQpO37A0upj+/oIs9kH6jqBi9vlIMAXH7bSeGPLyBzh8+Ndoe0GGb7+tBjLKbZdlFA91zPFpBI8EqPUzn3ixtLH3SlgHd/e3Ly6Q6SHuQqwHkSMh8/rwSCShNj/4LAN2AZsA7YB24AV/AKJGFCJY8mYMwAAAABJRU5ErkJggg==');
+}
+
+.twitter {
+  background-color: #7fbdd4;
+}
+.twitter:hover {
+  background-color: #00ACED;
+}
+.twitter:before {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAABtklEQVR42u3YwSuDYQDH8XezKG27TFyUWinFwbaDdmAHU25LXGTKAXdJKW6kJCNzWqnlhH9gLLUpuSCnSSk5zFKUAw4Le30PisMy79v7vNvyfOtzXOvX1t49j6KqalWTA+QAOUAOkAPkADngvw1ohg8dsFfTgCCSeIZKBdxiBS4oXxwIw2X0gADWoegwg9/KYASryGFHxCewBpWWoWgwAC0dw4kW1Bg54ED9Lg4HlBLqcIW/9ogNHGESViMHJPGzCwRKvMYPPW2K+ApFUaw4OqEUMQYtvWNW1K9QT4k33scE2lAHBUPQ0j1sYgYA2yjVG66RRApayqJexAArBuFDCqK6hFXUJ5DGC24gqoTIJ/E0RLckckAjHiCyPnEDgBA+IKIc7GIHAEGcowAji5j1b7QdYSRgVHm0mjUgBKOLmn0e2IJRZdFg9oBaxGBE/eU8kfUihlPoaaoSjpRN2IXW5sp5qLfBhwieoKVXjJt5K2FBNxYRxR4y0FMa3nJcq9gxijPo6QTDsFTCvZAH8zhEFvkiD6U7pLEAfyVfbDnghhdd8MANp7xalAPkADlADpAD5AA5oAp8ApLonD+K3UnKAAAAAElFTkSuQmCC');
+}
+
+.html5 {
+  background-color: #d7b6a8;
+}
+.html5:hover {
+  background-color: #F06529;
+}
+.html5:before {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAACM0lEQVR42u3ZQUiTYRzH8WnNJVgUM9EWXcxACiOSFu3QJergIYmgjl4kKCqCZEVCl+gSeJFAAougAiGoQ3QY4cFLEKyDZElKO3hQK01hUFBsfY8/Hlitvf2fEp4vfA7j2QY/GC+872LlcnlNCwPCgDAgDAgDvA2II+lJ3GJAF5bw2dgS9loMaIev2i0GJLEM674gaTEggQKsKyBhdRXKw7rXlpfRHLQCbkT0AVrOcsADaBOIRTQB7aHlgCFo01gXccAMtCHLAVloi9gk57tw6A8cxQq0rOWAPmhfsV3O7yJqfZYDeuC2R85vImo9lgPScDss5xcRtbTlgA6UoJ2U8604WKU0rkMrocNyQAtWoZ1FrEYXoK2ixXJAI+agXYsw4Ba0OTRaDqjDJLSXuCqu/MJl57J7H9ok6iwGqHHU2nc0y3c9hzbu45ZyDNoU9qMbGSyiUrPO3dYraGM+BgxDe+uc87pieecWdRbasI8Bg9DmsVHOH6EEtx+4I+/bjE/QBn0M6IdWRKucN6AL5/AEj3EGu52fzw58g9bvY8BxaCWkavienXDr9TEgA7cRHMGWKj7fjGO4B7eMjwGdqNQ8nuI8urAecezDJTzDR1Sq08eANhTxu0p4g3eopiLafAxowgL+dgto8jGg3ujpRB71VgNcKZzGKGZQa+8xilNI/aun0xtwAFm8wAoqtYwcBtCNxP/4eH0bTmAE05jCbfSida39P9CAePiDIwwIA8KAMCAMsPITrYPYx6zfXmkAAAAASUVORK5CYII=');
+}
+
+#resume {
+  z-index: 100;
+  position: relative;
+}
+
+</style>
+
+<style type="text/css" media="print">
+    body {
+  margin: 0;
+  padding: 0;
+  background: white;
+  font-size: 10pt;
+}
+body p {
+  widows: 3;
+  orphans: 3;
+}
+
+#contact, #skills {
+  position: relative;
+  width: 48%;
+  max-width: 48%;
+  top: 0;
+}
+
+#contact {
+  float: left;
+  left: 0;
+}
+
+#skills {
+  float: right;
+  right: 0;
+  padding-top: 1.5em;
+}
+#skills .skills-cloud {
+  font-size: .9em;
+  list-style-type: inline;
+}
+#skills .skills-cloud li {
+  display: inline;
+}
+#skills .skills-cloud li:after {
+  content: ", ";
+}
+#skills .skills-cloud li:last-child:after {
+  content: "";
+}
+
+#resume {
+  clear: both;
+  padding: 1em 0 0;
+  box-shadow: none;
+  border-top: 3px double #666;
+}
+
+</style>
+</body>
+</html>
