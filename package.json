@@ -22,7 +22,8 @@
     "yaml-front-matter": "~2.1.0",
     "helper-aggregate": "~0.1.1",
     "grunt-contrib-sass": "~0.5.0",
-    "grunt-contrib-watch": "~0.5.3"
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-gh-pages": "~0.8.1"
   },
   "keywords": [
     "html5",

@@ -2,6 +2,7 @@
 node_modules
 build/*
 dest/*
+.grunt
 
 # Cache files
 .sass-cache

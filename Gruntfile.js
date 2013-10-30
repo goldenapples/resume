@@ -37,7 +37,7 @@ module.exports = function(grunt) {
             resume: {
                 options: { layout: 'layout/layout.hbs' },
                 src: 'colophon.hbs',
-                dest: 'dest/resume.html'
+                dest: 'dest/index.html'
             }
         },
         watch: {
@@ -45,6 +45,12 @@ module.exports = function(grunt) {
                 files: [ 'colophon.hbs', 'Gruntfile.js', 'layout/**/*', 'content/**/*' ],
                 tasks: [ 'default' ]
             }
+        },
+        'gh-pages': {
+            options: {
+                base: 'dest'
+            },
+            src: ['**']
         }
     });
 
@@ -53,6 +59,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-css-img-2-data-uri');
     grunt.loadNpmTasks('assemble');
+
+    grunt.loadNpmTasks('grunt-gh-pages');
 
     grunt.loadNpmTasks('grunt-contrib-watch');
 
